@@ -1,5 +1,5 @@
 # MaestroDetalleNodeJs
-Ejemplo básico de un maestro detalle en NodeJs, que servirá como apirest para el proyecto RetrofitMaestroDetalle, la base de datos está implementada en Postgresql
+Ejemplo básico de un maestro detalle en NodeJs, que servirá como apirest para el proyecto RetrofitMaestroDetalle (https://github.com/programadorescs/RetrofitMaestroDetalle), la base de datos está implementada en Postgresql
 
 ## Script de la base de datos
 
