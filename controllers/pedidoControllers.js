@@ -21,9 +21,10 @@ module.exports = {
             return res.status(201).json({
                 success: true,
                 message: 'El pedido se registro correctamente',
-                data: [{
+                data: data.id
+                /*data: [{
                     'id': data.id
-                }]
+                }]*/
             });
 
         } catch (error) {
@@ -45,16 +46,17 @@ module.exports = {
 
         try {
 
-            const idproducto = req.params.id
+            const idPedido = req.params.id
 
-            await Pedido.anular(idproducto);
+            await Pedido.anular(idPedido);
 
             return res.status(201).json({
                 success: true,
                 message: 'El pedido fue anulado correctamente',
-                data: [{
-                    'id': idproducto
-                }]
+                data: idPedido
+                /*data: [{
+                    'id': idPedido
+                }]*/
             });
 
         } catch (error) {
@@ -72,8 +74,6 @@ module.exports = {
 
     async listarPorFecha(req, res, next) {
 
-        //console.log('REQ PARAM DESDE', req.params.desde)
-        //console.log('REQ PARAM HASTA', req.params.hasta)
         console.log('REQ PARAM DESDE', req.query.desde)
         console.log('REQ PARAM HASTA', req.query.hasta)
 

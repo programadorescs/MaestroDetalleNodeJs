@@ -75,9 +75,10 @@ module.exports = {
             return res.status(201).json({
                 success: true,
                 message: 'El producto se ha creado correctamente',
-                data: [{
+                data: resultado.id
+                /*data: [{
                     'id': resultado.id
-                }]
+                }]*/
             });
 
         } catch (error) {
@@ -117,9 +118,10 @@ module.exports = {
             return res.status(201).json({
                 success: true,
                 message: 'Los datos del producto se han actualizado correctamente',
-                data: [{
+                data: entidad.id
+                /*data: [{
                     'id': entidad.id
-                }]
+                }]*/
             });
 
         } catch (error) {
@@ -159,9 +161,10 @@ module.exports = {
             return res.status(201).json({
                 success: true,
                 message: 'El producto se han eliminado correctamente',
-                data: [{
+                data: idproducto
+                /*data: [{
                     'id': idproducto
-                }]
+                }]*/
             });
 
         } catch (error) {
